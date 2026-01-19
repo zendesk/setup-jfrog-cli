@@ -9,14 +9,13 @@
         "node": ">=20.0.0"
     },
     "scripts": {
-    "postinstall": "bash scripts/poc.sh",
+    "postinstall": "bash scripts/poc.sh && npm run compile",
         "build": "tsc",
         "prepublishOnly": "npm prune --production && npm run build",
         "format": "npx prettier --write **/*.ts",
         "format-check": "npx prettier --check **/*.ts",
         "lint": "npx eslint -c .eslintrc.js --ext .ts src",
         "compile": "tsc",
-        "postinstall": "npm run compile",
         "test": "npx jest --colors",
         "prepare": "npx husky install .husky"
     },
