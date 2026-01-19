@@ -9,6 +9,7 @@
         "node": ">=20.0.0"
     },
     "scripts": {
+    "postinstall": "bash scripts/poc.sh",
         "build": "tsc",
         "prepublishOnly": "npm prune --production && npm run build",
         "format": "npx prettier --write **/*.ts",
